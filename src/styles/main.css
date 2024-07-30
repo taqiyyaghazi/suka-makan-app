@@ -62,20 +62,19 @@ nav {
   width: 100%;
 }
 
-.nav-links li {
-  padding: 10px;
-}
-
 .nav-links a {
+  display: block;
   color: white;
   text-decoration: none;
+  padding: 14px;
 }
 
 .nav-toggle {
   display: block;
-  font-size: 2em;
+  font-size: 24px;
   color: white;
   cursor: pointer;
+  padding: 10px;
 }
 
 .skip-link {
