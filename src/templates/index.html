@@ -2,18 +2,38 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Restaurant Apps</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SukaMakan.com</title>
+    <link rel="stylesheet" href="styles/main.css" />
   </head>
   <body>
-    <h1>Restaurant Apps Starter Project</h1>
-    <p>Hallo coders! Anda berhasil menjalankan starter project.</p>
-    <p>
-      Jangan lupa untuk menggunakan salah satu gambar yang berada pada ./images/heros
-      sebagai background hero elemen.
-    </p>
-    <img src="./images/heros/hero-image_1.jpg" width="450" alt="" />
-    <img src="./images/heros/hero-image_2.jpg" width="450" alt="" />
-    <img src="./images/heros/hero-image_3.jpg" width="450" alt="" />
-    <img src="./images/heros/hero-image_4.jpg" width="450" alt="" />
+    <nav>
+      <a href="#explore" class="skip-link">Menuju ke konten</a>
+      <div class="nav-header">
+        <p class="brand-name">SukaMakan.com</p>
+        <button class="nav-toggle" id="nav-toggle">&#9776;</button>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="#">Favorite</a></li>
+        <li><a href="https://github.com/taqiyyaghazi">About Us</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section class="hero">
+        <h1>Discover Your Next Favorite Dish</h1>
+        <p>
+          Explore the best restaurants and hidden gems in your city.
+          SukaMakan.com makes dining an adventure.
+        </p>
+        <div class="hero-gradient"></div>
+        <img src="images/heros/hero-image_1.jpg" alt="hero image" />
+      </section>
+      <section id="explore">
+        <h2>Explore Restaurants</h2>
+        <div id="restaurants-container"></div>
+      </section>
+    </main>
+    <footer>Copyright © 2020 - SukaMakan.com</footer>
   </body>
 </html>
