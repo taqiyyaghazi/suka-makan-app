@@ -12,10 +12,6 @@ body {
   padding: 0;
 }
 
-img {
-  display: block;
-}
-
 button {
   border-radius: 0;
   text-align: inherit;
@@ -24,6 +20,11 @@ button {
   padding: 0;
   cursor: pointer;
   border: none;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
 }
 
 /* Navbar */
@@ -49,27 +50,27 @@ nav {
   align-items: center;
 }
 
-.nav-links {
+.navigation-drawer {
   list-style-type: none;
   padding: 0;
   margin: 0;
   display: none;
 }
 
-.nav-links.active {
+.navigation-drawer.open {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-.nav-links a {
+.navigation-drawer a {
   display: block;
   color: white;
   text-decoration: none;
   padding: 14px;
 }
 
-.nav-toggle {
+.hamburger-button {
   display: block;
   font-size: 24px;
   color: white;
@@ -139,7 +140,7 @@ nav {
   text-align: center;
 }
 
-#restaurants-container {
+.restaurants {
   padding: 16px;
 }
 
@@ -182,11 +183,11 @@ footer {
     align-items: center;
   }
 
-  .nav-links {
+  .navigation-drawer {
     display: flex;
   }
 
-  .nav-toggle {
+  .hamburger-button {
     display: none;
   }
 
@@ -203,7 +204,7 @@ footer {
     font-size: 36px;
   }
 
-  #restaurants-container {
+  .restaurants {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
