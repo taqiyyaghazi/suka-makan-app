@@ -1,4 +1,5 @@
 import RestaurantsApiSource from '../../data/restaurants-api-source';
+import SkipContentInitiator from '../../utils/skip-content-initiator';
 import { createRestaurantItemTemplate } from '../templates/template-creator';
 
 const Home = {
@@ -25,6 +26,11 @@ const Home = {
     restaurants.forEach((restaurant) => {
       restaurantsContainer.innerHTML
         += createRestaurantItemTemplate(restaurant);
+    });
+
+    SkipContentInitiator.init({
+      skipContentContainer: document.getElementById('skip-content-container'),
+      target: '#explore',
     });
   },
 };

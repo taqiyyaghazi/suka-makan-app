@@ -47,16 +47,14 @@ module.exports = {
       swDest: './sw.bundle.js',
       runtimeCaching: [
         {
-          urlPattern: ({ url }) =>
-            url.href.startsWith('https://restaurant-api.dicoding.dev/'),
+          urlPattern: ({ url }) => url.href.startsWith('https://restaurant-api.dicoding.dev/'),
           handler: 'StaleWhileRevalidate',
           options: {
             cacheName: 'restaurant-api',
           },
         },
         {
-          urlPattern: ({ url }) =>
-            url.href.startsWith('https://use.fontawesome.com/b070c8f1df.js'),
+          urlPattern: ({ url }) => url.href.startsWith('https://use.fontawesome.com/b070c8f1df.js'),
           handler: 'StaleWhileRevalidate',
           options: {
             cacheName: 'restaurant-api',

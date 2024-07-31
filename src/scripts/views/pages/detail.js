@@ -1,6 +1,6 @@
 import RestaurantsApiSource from '../../data/restaurants-api-source';
-import LikeButtonInitiator from '../../utils/like-button-initiator';
 import UrlParser from '../../routes/url-parser';
+import LikeButtonInitiator from '../../utils/like-button-initiator';
 import { createRestaurantDetailTemplate } from '../templates/template-creator';
 
 const Detail = {
