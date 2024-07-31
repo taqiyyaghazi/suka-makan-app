@@ -1,7 +1,6 @@
 import 'regenerator-runtime';
-// import '../styles/responsive.css';
 import '../styles/style.css';
-// import swRegister from './utils/sw-register';
+import swRegister from './utils/sw-register';
 import App from './views/app';
 
 const app = new App({
@@ -16,5 +15,5 @@ window.addEventListener('hashchange', () => {
 
 window.addEventListener('load', () => {
   app.renderPage();
-  // swRegister();
+  swRegister();
 });

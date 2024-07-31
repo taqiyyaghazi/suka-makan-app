@@ -110,4 +110,4 @@ export const createLikedButtonTemplate = () => `
     </button>
   `;
 
-export const createEmptyStateFavoriteRestaurantTemplate = () => '<h1 style="text-align: center;">Belum ada restaurant favorite yang ditambahkan</h1>';
+export const createEmptyStateFavoriteRestaurantTemplate = () => '<h3 style="text-align: center;">Belum ada restaurant favorite yang ditambahkan</h3>';
