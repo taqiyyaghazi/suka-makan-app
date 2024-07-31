@@ -1,7 +1,6 @@
 import CONFIG from '../../global/config';
 
-export const createRestaurantItemTemplate = (restaurant) => {
-  return `
+export const createRestaurantItemTemplate = (restaurant) => `
     <article class="restaurant-card">
         <img src="${CONFIG.BASE_IMAGE_URL}${restaurant.pictureId}" alt="Foto ${restaurant.name}"/>
         <header>
@@ -21,14 +20,12 @@ export const createRestaurantItemTemplate = (restaurant) => {
             <p>${restaurant.description}</p>
         </div>
     </article>`;
-};
 
-export const createRestaurantDetailTemplate = (restaurant) => {
-  return `
+export const createRestaurantDetailTemplate = (restaurant) => `
     <header>
         <img src="${CONFIG.BASE_IMAGE_URL}${restaurant.pictureId}" alt="Foto ${
-    restaurant.name
-  }"/>
+  restaurant.name
+}"/>
         <h1>${restaurant.name}</h1>
     </header>
     <section>
@@ -51,16 +48,16 @@ export const createRestaurantDetailTemplate = (restaurant) => {
                 <h3>Makanan</h3>
                 <ul>
                     ${restaurant.menus.foods
-                      .map((food) => `<li>${food.name}</li>`)
-                      .join('\n')}
+    .map((food) => `<li>${food.name}</li>`)
+    .join('\n')}
                 </ul>
             </div>
             <div>
                 <h3>Minumam</h3>
                 <ul>
                     ${restaurant.menus.drinks
-                      .map((drink) => `<li>${drink.name}</li>`)
-                      .join('\n')}
+    .map((drink) => `<li>${drink.name}</li>`)
+    .join('\n')}
                 </ul>
             </div>
         </div>
@@ -68,27 +65,26 @@ export const createRestaurantDetailTemplate = (restaurant) => {
     <section>
         <h3>Kategori</h3>
         ${restaurant.categories
-          .map((category) => `<span class="tag">${category.name}</span>`)
-          .join('\n')}
+    .map((category) => `<span class="tag">${category.name}</span>`)
+    .join('\n')}
     </section>
     <section>
         <h2>Ulasan</h2>
         <div>
             ${restaurant.customerReviews
-              .map(
-                (review) => `
+    .map(
+      (review) => `
                 <div class="review">
                     <h3>${review.name}</h3>
                     <p class="review-date">${review.date}</p>
                     <p class="review-text">${review.review}</p>
                 </div>
-                `
-              )
-              .join('\n')}
+                `,
+    )
+    .join('\n')}
         </div>
     </section>
     `;
-};
 
 export const createLikeButtonTemplate = () => `
     <button aria-label="like this restaurant" id="likeButton" class="like">

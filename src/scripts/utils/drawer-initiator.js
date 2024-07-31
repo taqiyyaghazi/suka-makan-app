@@ -1,8 +1,6 @@
 const DrawerInitiator = {
   init({ button, drawer, content }) {
-    console.log(button);
     button.addEventListener('click', (event) => {
-      console.log('masuk');
       this._toggleDrawer(event, drawer);
     });
 

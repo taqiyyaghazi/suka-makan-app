@@ -23,8 +23,8 @@ const Home = {
     const restaurants = await RestaurantsApiSource.listRestaurants();
     const restaurantsContainer = document.querySelector('#restaurants');
     restaurants.forEach((restaurant) => {
-      restaurantsContainer.innerHTML +=
-        createRestaurantItemTemplate(restaurant);
+      restaurantsContainer.innerHTML
+        += createRestaurantItemTemplate(restaurant);
     });
   },
 };
