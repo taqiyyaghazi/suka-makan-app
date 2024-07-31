@@ -244,6 +244,12 @@ footer {
   color: gray;
 }
 
+.favorite-restaurant {
+  margin-top: 32px;
+  padding: 16px;
+  min-height: 90dvh;
+}
+
 @media only screen and (min-width: 768px) {
   nav {
     display: flex;
@@ -272,7 +278,8 @@ footer {
     font-size: 36px;
   }
 
-  .restaurants {
+  .restaurants,
+  .favorite-restaurant-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -293,6 +300,10 @@ footer {
 
   .restaurant {
     margin-top: 80px;
+  }
+
+  .favorite-restaurant {
+    margin-top: 60px;
   }
 
   .restaurant img {
