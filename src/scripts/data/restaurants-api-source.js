@@ -8,8 +8,8 @@ class RestaurantsApiSource {
     return responseJson.restaurants;
   }
 
-  static async detailRestaurant() {
-    const response = await fetch(API_ENDPOINT.DETAIL_RESTAURANT);
+  static async detailRestaurant(id) {
+    const response = await fetch(API_ENDPOINT.DETAIL_RESTAURANT(id));
     const responseJson = await response.json();
     return responseJson.restaurant;
   }
