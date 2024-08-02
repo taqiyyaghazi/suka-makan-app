@@ -29,9 +29,28 @@ Scenario('liking one restaurant', async ({ I }) => {
   I.click('#likeButton');
 
   I.amOnPage('/#/favorite');
-  I.seeElement('.restaurant-card');
+  I.seeElement('.restaurant-title a');
 
   const likedRestaurantTitle = await I.grabTextFrom('.restaurant-title a');
 
   assert.strictEqual(firstRestaurantTitle, likedRestaurantTitle);
+});
+
+Scenario('unliking one restaurant', async ({ I }) => {
+  I.amOnPage('/');
+  I.click(locate('.restaurant-title a').first());
+  I.seeElement('#likeButton');
+  I.click('#likeButton');
+  I.amOnPage('/#/favorite');
+
+  I.seeElement('.restaurant-title a');
+  I.click(locate('.restaurant-title a').first());
+  I.seeElement('#likeButton');
+  I.click('#likeButton');
+
+  I.amOnPage('/#/favorite');
+  I.see(
+    'Belum ada restaurant favorite yang ditambahkan',
+    '.empty-restaurant-state'
+  );
 });
