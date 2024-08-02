@@ -14,8 +14,8 @@ const Home = {
             <div class="hero-gradient"></div>
             <picture>
               <source media="(max-width: 480px)" srcset="images/hero-image_1-sm.jpg">
-              <source media="(max-width: 600px)" srcset="images/hero-image_1-md.jpg">
-              <img src="images/hero-image_1-lg.jpg" alt="hero image" />
+              <source media="(max-width: 800px)" srcset="images/hero-image_1-md.jpg">
+              <img src="images/hero-image_1.jpg" alt="hero image" />
             </picture>
         </section>
         <section id="explore">
