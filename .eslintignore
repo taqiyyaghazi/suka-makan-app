@@ -1,6 +1,10 @@
 node_modules
 dist
 tests
+e2e
 
 jest.config.js
 webpack.*
+codecept.conf.js
+steps_file.js
+steps.d.ts
