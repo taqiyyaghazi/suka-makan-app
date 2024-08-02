@@ -103,7 +103,7 @@ nav {
   overflow: hidden;
 }
 
-.hero img {
+.hero picture {
   position: absolute;
   object-fit: cover;
   width: 100%;

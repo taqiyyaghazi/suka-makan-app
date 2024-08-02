@@ -2,7 +2,7 @@ import CONFIG from '../../global/config';
 
 export const createRestaurantItemTemplate = (restaurant) => `
     <article class="restaurant-card">
-        <img src="${CONFIG.BASE_IMAGE_URL}${restaurant.pictureId}" alt="Foto ${restaurant.name}"/>
+        <img class="lazyload" data-src="${CONFIG.BASE_IMAGE_URL}${restaurant.pictureId}" alt="Foto ${restaurant.name}"/>
         <header>
             <h3 class="restaurant-title"><a style="padding: 12px 0;" href="/#/detail/${restaurant.id}">${restaurant.name}</a></h3>
             <div>
@@ -23,7 +23,7 @@ export const createRestaurantItemTemplate = (restaurant) => `
 
 export const createFavoriteRestaurantItemTemplate = (restaurant) => `
     <article class="restaurant-card">
-        <img src="${CONFIG.BASE_IMAGE_URL}${restaurant.pictureId}" alt="Foto ${restaurant.name}"/>
+        <img class="lazyload" data-src="${CONFIG.BASE_IMAGE_URL}${restaurant.pictureId}" alt="Foto ${restaurant.name}"/>
         <header style="margin-bottom: 16px;">
             <h3 class="restaurant-title"><a style="padding: 12px 0;" href="/#/detail/${restaurant.id}">${restaurant.name}</a></h3>
             <small class="tag" style="margin-right: 4px;">

@@ -12,7 +12,11 @@ const Home = {
                 SukaMakan.com makes dining an adventure.
             </p>
             <div class="hero-gradient"></div>
-            <img src="images/heros/hero-image_1.jpg" alt="hero image" />
+            <picture>
+              <source media="(max-width: 480px)" srcset="images/hero-image_1-sm.jpg">
+              <source media="(max-width: 600px)" srcset="images/hero-image_1-md.jpg">
+              <img src="images/hero-image_1-lg.jpg" alt="hero image" />
+            </picture>
         </section>
         <section id="explore">
             <h2>Explore Restaurants</h2>
