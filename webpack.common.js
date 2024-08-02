@@ -3,6 +3,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
+const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
+const ImageminMozjpeg = require('imagemin-mozjpeg');
 
 module.exports = {
   entry: {
@@ -47,19 +49,30 @@ module.exports = {
       swDest: './sw.bundle.js',
       runtimeCaching: [
         {
-          urlPattern: ({ url }) => url.href.startsWith('https://restaurant-api.dicoding.dev/'),
+          urlPattern: ({ url }) =>
+            url.href.startsWith('https://restaurant-api.dicoding.dev/'),
           handler: 'StaleWhileRevalidate',
           options: {
             cacheName: 'restaurant-api',
           },
         },
         {
-          urlPattern: ({ url }) => url.href.startsWith('https://use.fontawesome.com/b070c8f1df.js'),
+          urlPattern: ({ url }) =>
+            url.href.startsWith('https://use.fontawesome.com/b070c8f1df.js'),
           handler: 'StaleWhileRevalidate',
           options: {
             cacheName: 'restaurant-api',
           },
         },
+      ],
+    }),
+
+    new ImageminWebpackPlugin({
+      plugins: [
+        ImageminMozjpeg({
+          quality: 50,
+          progressive: true,
+        }),
       ],
     }),
   ],
